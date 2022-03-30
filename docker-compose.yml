@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  worker:
+    build: .
+    environment:
+      SESSION: $SESSION
+      PMPERMIT_ENABLED: $PMPERMIT_ENABLED
+      MONGODB_URL: $MONGODB_URL
+      DEFAULT_TR_LANG: $DEFAULT_TR_LANG  # defaults to None
+      OCR_SPACE_API_KEY: $OCR_SPACE_API_KEY  # defaults to None
+      ENABLE_DELETE_ALERT: $ENABLE_DELETE_ALERT  # defaults to None
+      BOT_TOKEN: $BOT_TOKEN # Not mandatory
+      LOG_CHANNEL: $LOG_CHANNEL # Not mandatory
+      DATABASE_URL: $DATABASE_URL  # defaults to None
+      OKTETO: $OKTETO # whether Okteto or not
+      BRANCH: $BRANCH # Custom Branch, just in some case
+      OKTETO_TOKEN: $OKTETO_TOKEN
