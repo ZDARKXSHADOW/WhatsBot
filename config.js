@@ -5,7 +5,7 @@ require("dotenv").config();
 module.exports = {
   session: JSON.parse(
     process.env.SESSION ||
-      fs.readFileSync(__dirname + "/workspace/session.json", { encoding: "utf8" })
+
   ), //if not using env vars create a file named session.json
   pmpermit_enabled: process.env.PMPERMIT_ENABLED || "true",
   mongodb_url: process.env.MONGODB_URL || process.env.MONGO_URL || "",
